@@ -1,0 +1,11 @@
+site_name: infoshare-gdynia-app-demo
+site_description: 
+repo_url: https://github.com/piomin/infoshare-gdynia-app-demo
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - infoshare-gdynia-app-demo Documentation: index.md

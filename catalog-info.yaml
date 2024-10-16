@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: infoshare-gdynia-app-demo
+  title: infoshare-gdynia-app-demo
+  annotations:
+    janus-idp.io/tekton: infoshare-gdynia-app-demo
+    tektonci/build-namespace: demo
+    github.com/project-slug: piomin/infoshare-gdynia-app-demo
+    sonarqube.org/project-key: piomin_infoshare-gdynia-app-demo
+    backstage.io/kubernetes-id: infoshare-gdynia-app-demo
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: infoshare-gdynia-app-demo
+    prometheus.io/rule: container_memory_usage_bytes{pod=~"infoshare-gdynia-app-demo-.*"}|pod,rate(container_cpu_usage_seconds_total{pod=~"infoshare-gdynia-app-demo-.*"}[5m])|pod
+  tags:
+    - spring-boot
+    - java
+    - maven
+    - tekton
+    - argocd
+    - renovate
+    - sonarqube
+spec:
+  type: service
+  owner: piomin
+  lifecycle: experimental

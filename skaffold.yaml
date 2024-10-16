@@ -1,0 +1,16 @@
+apiVersion: skaffold/v4beta5
+kind: Config
+metadata:
+  name: infoshare-gdynia-app-demo
+build:
+  artifacts:
+    - image: piomin/infoshare-gdynia-app-demo
+      jib:
+        args:
+          - -Pjib
+          - -DskipTests
+manifests:
+  rawYaml:
+    - k8s/deployment.yaml
+deploy:
+  kubectl: {}
